@@ -1,0 +1,73 @@
+/* CSS Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+.moon-phase-bg {
+    background: url('file-MBmRNNosLREr2req7Pb38z6n.jpg') no-repeat center center fixed; /* Gambar fase bulan */
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.birthday-message {
+    position: relative;
+    top: 20%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.elegant-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.dandelion-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.dandelion {
+    position: absolute;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    background-image: url('https://cdn.pixabay.com/photo/2015/10/21/08/31/dandelion-998520_960_720.png'); /* Gambar dandelion dari internet */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+#scroll-message {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2rem;
+    color: white;
+    display: none;
+}
